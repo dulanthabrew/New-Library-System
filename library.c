@@ -1,29 +1,48 @@
-/*
-  Project Name: Library Management System
-  Created By: Thabrew.KDH, Galappaththi.WPGAL, Herath.HMLP,
-  Jayamini.HBC, Jayawardhana.RAKS, Lekamge.KLYK
-
-  Github: https://github.com/dulanthabrew/Library-System
-*/
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-int main()
-{
-    struct reader{
-        int id;
-        char name[20];
-        char due;
-        int dbid;
-    } rdr[10]={0};              //rdr array is initialised with structure of reader
+#define USERNAME "admin"
+#define PASSWORD "password"
 
-    struct book{
-        int id;
-        char name[30];
-        char author[20];
-        char avbl;
-        int rid;
-    } bk[20]={0};               //bk array is initialised with structure of book
+struct reader {
+    int id;
+    char name[20];
+    char due;
+    int dbid;
+};
+
+struct book {
+    int id;
+    char name[30];
+    char author[20];
+    char avbl;
+    int rid;
+};
+
+int main() {
+    char username[20];
+    char password[20];
+
+    printf("Enter username: ");
+    scanf("%s", username);
+
+    printf("Enter password: ");
+    scanf("%s", password);
+
+    // Compare the entered username and password with the hardcoded ones
+    if (strcmp(username, USERNAME) == 0 && strcmp(password, PASSWORD) == 0) {
+        printf("Login successful!\n");
+        // Your existing library management system code can be placed here
+        // This section will only execute if the login is successful
+    } else {
+        printf("Invalid username or password. Access denied.\n");
+        // You may choose to exit the program or handle the login failure differently
+        return 1; // Exiting the program in case of login failure
+    }
+
+    struct reader rdr[10] = {0}; // rdr array is initialized with the structure of reader
+    struct book bk[20] = {0};    // bk array is initialized with the structure of book
 
     int choice, searchid, searchid1, n, m;
     printf("\n\t\tWELCOME TO LIBRARY-MANAGEMENT SYSTEM!\n");
@@ -45,7 +64,7 @@ int main()
                         scanf("%d", &bk[i].id);
                         bk[i].avbl='y';
                         bk[i].rid=0;
-                        i=20;                       
+                        i=20;
                         printf("Book added successfully.\n\n");
                     }
                 }
