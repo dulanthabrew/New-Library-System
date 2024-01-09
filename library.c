@@ -1,3 +1,10 @@
+/*
+  Project Name: Library Management System
+  Created By: Thabrew.KDH, Galappaththi.WPGAL, Herath.HMLP,
+  Jayamini.HBC, Jayawardhana.RAKS, Lekamge.KLYK
+
+  Github: https://github.com/dulanthabrew/Library-System
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
