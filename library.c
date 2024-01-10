@@ -1,3 +1,10 @@
+/*
+  Project Name: Library Management System
+  Created By: Thabrew.KDH, Galappaththi.WPGAL, Herath.HMLP,
+  Jayamini.HBC, Jayawardhana.RAKS, Lekamge.KLYK
+
+  Github: https://github.com/dulanthabrew/Library-System
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -228,7 +235,6 @@ int main() {
 
             case 10:
                 printf("\n\t\tTHANK YOU!");
-
                 exit(0);
                 break;
         }
@@ -237,4 +243,3 @@ int main() {
 
     return 0;
 }
-admin
